@@ -1,0 +1,39 @@
+.student-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 380px;
+}
+
+.student-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+.student-form input {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 2px solid #ccc;
+    transition: 0.2s ease;
+}
+
+.student-form input.valid {
+    border-color: #3cb371;
+}
+
+.student-form input.invalid {
+    border-color: #e63946;
+}
+
+.student-form button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #3a57e8;
+    color: white;
+    font-weight: 600;
+}
