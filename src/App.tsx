@@ -1,11 +1,12 @@
 import React from "react";
 import StudentForm from "./components/StudentForm.tsx";
+import "./App.css"; 
 
 export default class App extends React.Component {
     render() {
         return (
-            <div style={{ padding: "20px" }}>
-                <h1>Форма студента</h1>
+            <div className="app-container">
+                <h1 className="app-title">Форма студента</h1>
 
                 <StudentForm
                     name="Петро"

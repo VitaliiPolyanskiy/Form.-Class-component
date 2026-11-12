@@ -1,22 +1,50 @@
 .student-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    max-width: 380px;
+    gap: 18px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Якщо використовується темна тема (як у index.css), картка також адаптується */
+@media (prefers-color-scheme: dark) {
+    .student-form {
+        background: #1e1e1e;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
 }
 
 .student-form label {
     display: flex;
     flex-direction: column;
     font-weight: 600;
+    gap: 6px;
+    text-align: left;
 }
 
 .student-form input {
-    padding: 8px;
-    font-size: 14px;
-    border-radius: 6px;
-    border: 2px solid #ccc;
-    transition: 0.2s ease;
+    padding: 10px 12px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+    .student-form input {
+        border: 2px solid #333;
+        color: white;
+    }
+}
+
+.student-form input:focus {
+    box-shadow: 0 0 0 3px rgba(58, 87, 232, 0.15);
 }
 
 .student-form input.valid {
@@ -28,7 +56,8 @@
 }
 
 .student-form button {
-    padding: 10px;
+    margin-top: 10px;
+    padding: 12px;
     font-size: 16px;
     border-radius: 8px;
     border: none;
@@ -36,4 +65,15 @@
     background: #3a57e8;
     color: white;
     font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.student-form button:hover {
+    background: #2b45cc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(58, 87, 232, 0.3);
+}
+
+.student-form button:active {
+    transform: translateY(0);
 }

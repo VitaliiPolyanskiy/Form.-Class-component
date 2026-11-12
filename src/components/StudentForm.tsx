@@ -77,12 +77,12 @@ export default class StudentForm extends React.Component<Props, State> {
             const { name, surname, age, rating } = this.state;
 
             Swal.fire({
-                title: "Информация о студенте",
+                title: "Інформація про студента",
                 html: `
                     <div style="text-align: left; font-size: 16px;">
-                        <b>Имя:</b> ${name}<br>
-                        <b>Фамилия:</b> ${surname}<br>
-                        <b>Возраст:</b> ${age}<br>
+                        <b>Ім'я:</b> ${name}<br>
+                        <b>Прізвище:</b> ${surname}<br>
+                        <b>Вік:</b> ${age}<br>
                         <b>Рейтинг:</b> ${rating}
                     </div>
                 `,
@@ -92,10 +92,10 @@ export default class StudentForm extends React.Component<Props, State> {
             });
         } else {
             Swal.fire({
-                title: "Ошибка",
-                text: "Проверьте правильность заполнения формы.",
+                title: "Помилка",
+                text: "Перевірте правильність заповнення форми.",
                 icon: "error",
-                confirmButtonText: "Понятно",
+                confirmButtonText: "Зрозуміло",
             });
         }
     };
@@ -109,7 +109,7 @@ export default class StudentForm extends React.Component<Props, State> {
         return (
             <form className="student-form" onSubmit={this.handleSubmit}>
                 <label>
-                    Имя:
+                    Ім'я:
                     <input
                         type="text"
                         value={name}
@@ -119,7 +119,7 @@ export default class StudentForm extends React.Component<Props, State> {
                 </label>
 
                 <label>
-                    Фамилия:
+                    Прізвище:
                     <input
                         type="text"
                         value={surname}
@@ -129,7 +129,7 @@ export default class StudentForm extends React.Component<Props, State> {
                 </label>
 
                 <label>
-                    Возраст:
+                    Вік:
                     <input
                         type="number"
                         value={age}
@@ -148,7 +148,7 @@ export default class StudentForm extends React.Component<Props, State> {
                     />
                 </label>
 
-                <button type="submit">Отправить</button>
+                <button type="submit">Надіслати</button>
             </form>
         );
     }
